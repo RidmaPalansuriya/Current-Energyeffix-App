@@ -1,6 +1,7 @@
 import 'package:energyeffix_app/Components/MyDrawer.dart';
 import 'package:energyeffix_app/About.dart';
 import 'package:energyeffix_app/Goal.dart';
+import 'package:energyeffix_app/Help.dart';
 import 'package:energyeffix_app/Profile.dart';
 import 'package:energyeffix_app/SettingsPage.dart';
 import 'package:flutter/material.dart';
@@ -71,6 +72,7 @@ class EnergyEffixApp extends StatelessWidget {
 
         '/about': (context) => About(),
         '/settings': (context) => SettingsPage(),
+        'help': (context) => Help(),
 
       '/profile': (context) => Profile(
       userID: 123456,
@@ -84,9 +86,6 @@ class EnergyEffixApp extends StatelessWidget {
 //     home: MyNavBar(),
 //   ));
 // }
-
-
-
       },
 
 //: [RouteObserverProvider(child: MaterialApp()).routeObserver],

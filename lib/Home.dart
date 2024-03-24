@@ -133,7 +133,7 @@ class Home extends StatelessWidget {
               ),
 
               // 4 Buttons
-              
+
 
               // Horizontally scrollable row of daily challenge cards
               Container(

@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:energyeffix_app/Components/MyNavBar.dart';
 
@@ -29,7 +31,6 @@ class Analytics extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: MyNavBar(),
     );
   }
 }
