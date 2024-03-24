@@ -1,5 +1,6 @@
 import 'package:energyeffix_app/Components/MyDrawer.dart';
 import 'package:energyeffix_app/About.dart';
+import 'package:energyeffix_app/FAQs.dart';
 import 'package:energyeffix_app/Goal.dart';
 import 'package:energyeffix_app/Help.dart';
 import 'package:energyeffix_app/Profile.dart';
@@ -67,12 +68,11 @@ class EnergyEffixApp extends StatelessWidget {
         '/getStarted': (context) => GetStartedScreen(), // Route for GetStartedScreen
 
         '/manualentry' : (context) => ManualEntry(),
-
         '/mydrawer' :(context) =>  MyDrawer(userName: "Ridma Palansuriya", userId: "12345678", points: 2000,),
-
         '/about': (context) => About(),
         '/settings': (context) => SettingsPage(),
-        'help': (context) => Help(),
+        '/help': (context) => Help(),
+        '/faq': (context) => FAQs(month: "March",year: 2024, units: 240,),
 
       '/profile': (context) => Profile(
       userID: 123456,

@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
+import 'Components/CustomAppBar.dart';
+import 'Components/CustomDrawer.dart';
+
 class Help extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Help'),
-      ),
+      backgroundColor: Color(0xFF1D1E33),
+      appBar: CustomAppBar(appBar: AppBar(
+        toolbarHeight: 120,
+      ), title: "Help"),
+      drawer: CustomDrawer(),
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.all(20.0),
@@ -20,7 +25,7 @@ class Help extends StatelessWidget {
             SizedBox(height: 10),
             _customListTile(
               title: 'Getting Started',
-              routeName: '/getting_started',
+              routeName: '/getStarted',
               context: context,
               iconData: Icons.play_arrow,
             ),
