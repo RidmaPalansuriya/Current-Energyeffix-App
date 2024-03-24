@@ -1,3 +1,5 @@
+import 'package:energyeffix_app/Devices.dart';
+import 'package:energyeffix_app/ManualEntry.dart';
 import 'package:energyeffix_app/home.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -166,12 +168,12 @@ class Home extends StatelessWidget {
                       buildButton(
                         context,
                         'Add Device',
-                        LeaderboardPage(),
+                        Devices(),
                       ),
                       buildButton(
                         context,
                         'Manual Input',
-                        MyRewardsPage(),
+                        ManualEntry(),
                       ),
                     ]),
                   ],

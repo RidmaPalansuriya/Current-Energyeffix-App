@@ -20,11 +20,12 @@ class ChallengeCreationPage extends StatefulWidget {
   _ChallengeCreationPageState createState() => _ChallengeCreationPageState();
 }
 
-class _ChallengeCreationPageState extends State<ChallengeCreationPage> {
-  late int _targetUnit;
+  class _ChallengeCreationPageState extends State<ChallengeCreationPage> {
+  late int _targetUnit = 0; // Initialize with a default value
   String _goalPeriod = '';
   String _selectedAlertPercentage = '';
   final List<String> alertPercentageOptions = ['25%', '50%', '75%', '90%'];
+
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +47,7 @@ class _ChallengeCreationPageState extends State<ChallengeCreationPage> {
                   style: TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(height: 10.0),
@@ -75,6 +77,8 @@ class _ChallengeCreationPageState extends State<ChallengeCreationPage> {
                   spacing: 10.0,
                   children: [
                     ChoiceChip(
+                      backgroundColor: Colors.blue,
+                      selectedColor: Colors.red,
                       label: Text('Daily'),
                       selected: _goalPeriod == 'Daily',
                       onSelected: (selected) {
@@ -84,6 +88,8 @@ class _ChallengeCreationPageState extends State<ChallengeCreationPage> {
                       },
                     ),
                     ChoiceChip(
+                      backgroundColor: Colors.blue,
+                      selectedColor: Colors.red,
                       label: Text('Weekly'),
                       selected: _goalPeriod == 'Weekly',
                       onSelected: (selected) {
@@ -93,6 +99,8 @@ class _ChallengeCreationPageState extends State<ChallengeCreationPage> {
                       },
                     ),
                     ChoiceChip(
+                      backgroundColor: Colors.blue,
+                      selectedColor: Colors.red,
                       label: Text('Monthly'),
                       selected: _goalPeriod == 'Monthly',
                       onSelected: (selected) {
@@ -118,6 +126,8 @@ class _ChallengeCreationPageState extends State<ChallengeCreationPage> {
                     return ChoiceChip(
                       label: Text(option),
                       backgroundColor: Colors.blue,
+                      selectedColor: Colors.red, // Setting the border color
+                      //borderWidth: 1,
                       selected: _selectedAlertPercentage == option,
                       onSelected: (selected) {
                         setState(() {
